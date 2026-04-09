@@ -1,0 +1,71 @@
+YASEEN ARSALAAN MOHAMMED
+Data Scientist | Machine Learning | NLP | Generative AI | Python | SQL
+📧 Yaseen_arsalaan@icloud.com | 🌍 India | Open to Relocation (UAE)
+
+--------------------------------------------------
+CORE SKILLS
+Python • SQL • Pandas • NumPy • Scikit-learn • XGBoost • LightGBM  
+Machine Learning • Deep Learning • NLP • Generative AI (RAG, LLMs)  
+Feature Engineering • Model Optimization • Hyperparameter Tuning  
+Data Analysis • Statistical Modeling • A/B Testing  
+FastAPI • Docker • Git • Power BI • Tableau • SHAP • MLflow  
+
+--------------------------------------------------
+PROFESSIONAL EXPERIENCE
+
+DATA SCIENTIST — DVLA, UK  
+Aug 2025 – Present  
+• Built and deployed production-grade ML models improving prediction accuracy by 20%  
+• Designed scalable ML pipelines (training → validation → deployment)  
+• Reduced model training time by 35% via optimized feature engineering  
+• Developed explainable AI systems using SHAP for business transparency  
+• Delivered executive dashboards translating ML outputs into business insights  
+
+JUNIOR DATA SCIENTIST — DVLA, UK  
+Dec 2023 – Aug 2025  
+• Conducted large-scale EDA uncovering behavioral and operational patterns  
+• Built predictive models (XGBoost, Random Forest) for forecasting & classification  
+• Processed structured & unstructured datasets (text + tabular)  
+• Collaborated with engineering teams for deployment-ready ML systems  
+
+--------------------------------------------------
+PROJECTS (HIGH IMPACT)
+
+Fraud Detection System  
+• Built ensemble ML models on 1M+ records achieving 91% precision  
+• Addressed class imbalance using SMOTE and threshold tuning  
+• Reduced false positives significantly in high-risk segments  
+
+Credit Risk Prediction  
+• Developed XGBoost model achieving 0.92 AUC  
+• Performed feature importance analysis and model explainability  
+• Optimized hyperparameters using GridSearchCV  
+
+GenAI Resume & Support Assistant (RAG System)  
+• Built LLM-powered chatbot using LangChain + OpenAI  
+• Implemented Retrieval-Augmented Generation with FAISS  
+• Improved response accuracy by 28% using contextual retrieval  
+• Designed interactive UI using Streamlit  
+
+Real-Time ML Pipeline  
+• Built scalable inference pipeline using FastAPI + Docker  
+• Enabled real-time predictions with low latency  
+• Designed modular API architecture for deployment  
+
+NLP Compliance Engine  
+• Built anomaly detection system on transport text datasets  
+• Used NLP techniques (TF-IDF, embeddings) for classification  
+• Identified compliance risks with high precision  
+
+--------------------------------------------------
+EDUCATION
+
+MSc Data Science — University of Exeter (First Class)  
+BTech Computer Science — JNTUH (First Class)  
+
+--------------------------------------------------
+CERTIFICATIONS
+
+HarvardX Data Science  
+IBM Data Science Professional Certificate  
+Deep Learning Specialization — Andrew Ng  
