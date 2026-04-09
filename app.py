@@ -20,7 +20,7 @@ option = st.sidebar.selectbox(
         "💬 AI Interview Chat",
         "📊 Resume Analyzer",
         "🎯 Job Match",
-        "🔥 HR Killer Answers",
+        "HR Answers",
         "🚀 My Projects (Explained)",
         "💼 Why Hire Me?"
     ]
@@ -117,7 +117,7 @@ elif option == "🎯 Job Match":
         st.write(response.choices[0].message.content)
 
 # -------------------- 4. HR KILLER ANSWERS --------------------
-elif option == "🔥 HR Answers":
+elif option == "HR Answers":
     question = st.selectbox(
         "Choose Interview Question",
         [
