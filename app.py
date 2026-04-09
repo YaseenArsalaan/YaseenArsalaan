@@ -117,7 +117,7 @@ elif option == "🎯 Job Match":
         st.write(response.choices[0].message.content)
 
 # -------------------- 4. HR KILLER ANSWERS --------------------
-elif option == "🔥 HR Killer Answers":
+elif option == "🔥 HR Answers":
     question = st.selectbox(
         "Choose Interview Question",
         [
