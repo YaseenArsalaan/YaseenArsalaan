@@ -1,13 +1,13 @@
 import streamlit as st
 from openai import OpenAI
+import os
 
 # -------------------- CONFIG --------------------
-client = OpenAI(api_key="YOUR_API_KEY")
-
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 st.set_page_config(page_title="Yaseen AI Career System")
 
-st.title("🧠 Yaseen AI Career System")
-st.write("AI-powered portfolio | Data Scientist")
+st.title("🧠 Yaseen AI Career Intelligence System")
+st.write("AI-powered portfolio | Data Scientist | LLM + RAG")
 
 # -------------------- LOAD RESUME --------------------
 with open("resume.txt", "r") as f:
@@ -20,7 +20,9 @@ option = st.sidebar.selectbox(
         "💬 AI Interview Chat",
         "📊 Resume Analyzer",
         "🎯 Job Match",
-        "🔥 HR Killer Answers"
+        "🔥 HR Killer Answers",
+        "🚀 My Projects (Explained)",
+        "💼 Why Hire Me?"
     ]
 )
 
@@ -30,15 +32,12 @@ if option == "💬 AI Interview Chat":
 
     if query:
         prompt = f"""
-        You are a senior recruiter interviewing a Data Scientist.
+        You are Yaseen Arsalaan Mohammed himself, answering confidently in an interview.
 
-        Answer questions about Yaseen Arsalaan Mohammed using ONLY the resume below.
-
-        Your answers must be:
-        - Professional
-        - Confident
-        - Clear
-        - Interview-ready
+        - Speak in first person ("I", "my experience")
+        - Be specific with projects, metrics, and tools
+        - Sound human, not robotic
+        - Keep answers concise but impactful
 
         RESUME:
         {resume}
@@ -133,15 +132,14 @@ elif option == "🔥 HR Killer Answers":
 
     if question:
         prompt = f"""
-        You are an expert interview coach.
+        You are Yaseen.
 
-        Generate a PERFECT answer for this interview question based on Yaseen's resume.
+        Generate a PERFECT answer.
 
-        The answer must:
-        - Sound natural (human, not robotic)
-        - Be confident
-        - Be concise but impactful
-        - Impress HR
+        - Natural (human tone)
+        - Confident
+        - Concise but impactful
+        - Based on real experience
 
         RESUME:
         {resume}
@@ -157,3 +155,68 @@ elif option == "🔥 HR Killer Answers":
 
         st.write("🔥 Best Answer")
         st.write(response.choices[0].message.content)
+
+# -------------------- 5. PROJECT EXPLAINER --------------------
+elif option == "🚀 My Projects (Explained)":
+    project = st.selectbox(
+        "Select Project",
+        [
+            "Fraud Detection System",
+            "Credit Risk Prediction",
+            "GenAI Support Bot",
+            "Real-Time ML Pipeline",
+            "NLP Compliance Engine"
+        ]
+    )
+
+    prompt = f"""
+    You are Yaseen explaining your project in an interview.
+
+    Include:
+    - Problem
+    - Approach
+    - Tools used
+    - Results (metrics)
+    - Business impact
+
+    Speak in first person.
+
+    RESUME:
+    {resume}
+
+    PROJECT:
+    {project}
+    """
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    st.write("🚀 Project Explanation")
+    st.write(response.choices[0].message.content)
+
+# -------------------- 6. WHY HIRE ME --------------------
+elif option == "💼 Why Hire Me?":
+    prompt = f"""
+    You are Yaseen.
+
+    Answer: "Why should we hire you?"
+
+    Make it:
+    - Confident
+    - Data-driven
+    - Focused on impact
+    - Short and powerful
+
+    RESUME:
+    {resume}
+    """
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    st.write("💼 Why Hire Me")
+    st.write(response.choices[0].message.content)
